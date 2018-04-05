@@ -1,0 +1,36 @@
+{
+       "equipos" : [
+    {
+    	"nombre": "DarkSoulTemple",
+   	"institucion": "UNS",
+    	"integrantes": [
+                          {"nickname": "Vorksector"},
+                          {"nickname": "Kakukun"}
+    			]
+    },
+     {
+    	"nombre": "TheAvengers",
+   	"institucion": "UTN BB",
+    	"integrantes": [
+                        {"nickname": "VarianWrynn"},
+                        {"nickname": "DarkKnight666"}
+    			]
+        },
+         {
+    	"nombre": "JusticeLeague",
+   	"institucion": "UTN BB",
+    	"integrantes": [
+                        {"nickname": "Aquaman"},
+                        {"nickname": "Cyborg"}
+    			]
+        },
+         {
+    	"nombre": "X-Force",
+   	"institucion": "UTN BB",
+    	"integrantes": [
+                        {"nickname": "Psylocke"},
+                        {"nickname": "Jean Grey"}
+    			]
+        }
+    ]
+}

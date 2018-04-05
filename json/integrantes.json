@@ -1,0 +1,92 @@
+{   "integrantes" : [
+    {
+        "nombre": "José",
+        "apellido": "Fuentes",
+        "nickname": "Vorksector",
+        "DNI": "35345231",
+        "edad": "23",
+        "sexo" : "M",
+        "foto" : "foto1.jpg",
+        "cartaFavorita": "Firelands portal",
+        "claseFavorita": "Mage"
+    },
+    {
+        "nombre": "Pedro",
+        "apellido": "Castillo",
+        "nickname": "Kakukun",
+        "DNI" : "31234421",
+        "edad": "19",
+        "sexo" : "M",
+        "foto" : "foto2.jpg",
+        "cartaFavorita": "Twisting Nether",
+        "claseFavorita": "Warlock"
+    },
+        {
+        "nombre": "Pedro",
+        "apellido": "Castillo",
+        "nickname": "VarianWrynn",
+        "DNI" : "31234421",
+        "edad": "19",
+        "sexo" : "M",
+        "foto" : "foto2.jpg",
+        "cartaFavorita": "Twisting Nether",
+        "claseFavorita": "Warlock"
+    },
+        {
+        "nombre": "Pedro",
+        "apellido": "Castillo",
+        "nickname": "DarkKnight666",
+        "DNI" : "31234421",
+        "edad": "19",
+        "sexo" : "M",
+        "foto" : "foto2.jpg",
+        "cartaFavorita": "Twisting Nether",
+        "claseFavorita": "Warlock"
+    },
+           {
+        "nombre": "Pedro",
+        "apellido": "Castillo",
+        "nickname": "Aquaman",
+        "DNI" : "31234421",
+        "edad": "19",
+        "sexo" : "M",
+        "foto" : "foto2.jpg",
+        "cartaFavorita": "Twisting Nether",
+        "claseFavorita": "Warlock"
+    },
+           {
+        "nombre": "Pedro",
+        "apellido": "Castillo",
+        "nickname": "Cyborg",
+        "DNI" : "31234421",
+        "edad": "19",
+        "sexo" : "M",
+        "foto" : "foto2.jpg",
+        "cartaFavorita": "Twisting Nether",
+        "claseFavorita": "Warlock"
+    },
+           {
+        "nombre": "Pedro",
+        "apellido": "Castillo",
+        "nickname": "Psylocke",
+        "DNI" : "31234421",
+        "edad": "19",
+        "sexo" : "M",
+        "foto" : "foto2.jpg",
+        "cartaFavorita": "Twisting Nether",
+        "claseFavorita": "Warlock"
+    },
+             {
+        "nombre": "Pedro",
+        "apellido": "Castillo",
+        "nickname": "Jean Grey",
+        "DNI" : "31234421",
+        "edad": "19",
+        "sexo" : "M",
+        "foto" : "foto2.jpg",
+        "cartaFavorita": "Twisting Nether",
+        "claseFavorita": "Warlock"
+    }
+    ]
+}
+    
