@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 function mostrarEquipos (datosInstancias, datosEnfrentamientos) {
+=======
+function mostrarEquipo1 (datosInstancias, datosEnfrentamientos) {
+>>>>>>> 07b4c6ee079ab1cb9e66ab62d30ca48b07c6990e
     for (k=0; k < datosInstancias.instancias.length; k++) {
         for (j = 0; j< datosInstancias.instancias[k].enfrentamientos.length; j++){
             for (i=0; i< datosEnfrentamientos.enfrentamientos.length; i++){
@@ -6,10 +10,14 @@ function mostrarEquipos (datosInstancias, datosEnfrentamientos) {
                     var fecha = $("#fecha").append($("<tr></tr>"));
                     var equipo1 = $("#equipo1").append($("<tr></tr>"));
                     var equipo2 = $("#equipo2").append($("<tr></tr>"));
+<<<<<<< HEAD
                     if (i % 2 === 0)
                         fecha.append($("<td></td").text(datosInstancias.instancias[k].nombre));
                     else
                         fecha.append($("<td></td").text(datosInstancias.instancias[k].diaInicio + " - " + datosInstancias.instancias[k].diaFin));
+=======
+                    fecha.append($("<td></td").text(datosInstancias.instancias[k].nombre));
+>>>>>>> 07b4c6ee079ab1cb9e66ab62d30ca48b07c6990e
                     equipo1.append($("<td></td").text(datosEnfrentamientos.enfrentamientos[i].equipo1));
                     equipo2.append($("<td></td").text(datosEnfrentamientos.enfrentamientos[i].equipo2));
                 }
@@ -21,7 +29,11 @@ function mostrarEquipos (datosInstancias, datosEnfrentamientos) {
 var jsonInstancias = JSON.parse($.getJSON({'url': "json/instancias.json", 'async': false}).responseText);
 var jsonEnfrentamientos = JSON.parse($.getJSON({'url': "json/enfrentamientos.json", 'async': false}).responseText);
 
+<<<<<<< HEAD
 $(document).ready(mostrarEquipos(jsonInstancias, jsonEnfrentamientos));
+=======
+$(document).ready(mostrarEquipo1(jsonInstancias, jsonEnfrentamientos));
+>>>>>>> 07b4c6ee079ab1cb9e66ab62d30ca48b07c6990e
 
 function mostrarEquipo2 (datosInstancias, datosEnfrentamientos) {
     for (k=0; k < datosInstancias.instancias.length; k++) {
