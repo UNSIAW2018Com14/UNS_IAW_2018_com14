@@ -1,35 +1,39 @@
 {
        "equipos" : [
     {
-    	"nombre": "DarkSoulTemple",
+    	"nombre": "X-Men",
    	"institucion": "UNS",
     	"integrantes": [
-                          {"nickname": "Vorksector"},
-                          {"nickname": "Kakukun"}
+                          {"nickname": "Storm"},
+                          {"nickname": "Iceman"},
+                          {"nickname": "Cyclops"}
     			]
     },
      {
     	"nombre": "TheAvengers",
    	"institucion": "UTN BB",
     	"integrantes": [
-                        {"nickname": "VarianWrynn"},
-                        {"nickname": "DarkKnight666"}
-    			]
-        },
-         {
-    	"nombre": "JusticeLeague",
-   	"institucion": "UTN BB",
-    	"integrantes": [
-                        {"nickname": "Aquaman"},
-                        {"nickname": "Cyborg"}
+                        {"nickname": "ScarletWitch"},
+                        {"nickname": "IronMan"},
+                        {"nickname": "Quicksilver"}
     			]
         },
          {
     	"nombre": "X-Force",
    	"institucion": "UTN BB",
     	"integrantes": [
-                        {"nickname": "Psylocke"},
-                        {"nickname": "Jean Grey"}
+                        {"nickname": "Cable"},
+                        {"nickname": "Wolverine"},
+                        {"nickname": "Psylocke"}
+    			]
+        },
+         {
+    	"nombre": "HellfireClub",
+   	"institucion": "UTN BB",
+    	"integrantes": [
+                        {"nickname": "WhiteQueen"},
+                        {"nickname": "Gambit"},
+                        {"nickname": "Phoenix"}
     			]
         }
     ]

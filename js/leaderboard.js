@@ -1,6 +1,7 @@
+
 function mostrarRankingEquipos (datosEquipos){
     for (i = 0; i < datosEquipos.equipos.length; i++) {
-     $("#rankingEquipos").append($("<li></li>").text(datosEquipos.equipos[i].nombre));
+     $("#rankingEquipos").append($("<li></li>").addClass("list-group-item").text(datosEquipos.equipos[i].nombre));
     }
 }
 

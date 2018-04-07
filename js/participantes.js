@@ -5,37 +5,51 @@ var jsonEquipos = JSON.parse($.getJSON({'url': "json/equipos.json", 'async': fal
 
 function mostrarEquipos (datosEquipos){
     for (i = 0; i < datosEquipos.equipos.length; i++) {
-     var id = "#equipo" +(i+1);
-     var text = datosEquipos.equipos[i].nombre;
-     $(id).text(text);
+       var id = "equipo"+(i+1);
+       $("#muestraEquipos").append($("<li></li>").addClass("list-group-item").attr("id",id).text(datosEquipos.equipos[i].nombre));
     }
 }
 
 
-function mostrarIntegrantes(datosEquipos, equipoElegido) {
-   for (i = 0; i < datosEquipos.equipos[equipoElegido].integrantes.length; i++) {
-       var text = datosEquipos.equipos[equipoElegido].integrantes[i].nickname;
-       var id = "#integrante" + (i+1);
-       $(id).text(text);
+function mostrarIntegrantes(datosEquipos, idEquipo) {
+    var equipoElegido;
+    switch (idEquipo) {
+    case "equipo1":
+        equipoElegido=0;
+        break;
+    case "equipo2":
+        equipoElegido=1;
+        break;
+    case "equipo3":
+        equipoElegido=2;
+        break;
+    case "equipo4":
+        equipoElegido=3;
+        break;
+    }
+    
+    for (i = 0; i < datosEquipos.equipos[equipoElegido].integrantes.length; i++) {
+       var id = "integrante" + (i+1);
+       $("#muestraIntegrantes").append($("<li></li>").addClass("list-group-item").attr("id",id).text(datosEquipos.equipos[equipoElegido].integrantes[i].nickname));
+}
+}
+
+function mostrarIntegrantesVacio (){
+   for (i = 0; i < 3; i++) {
+       var text = "integrante " + (i+1);
+       $("#muestraIntegrantes").append($("<li></li>").addClass("list-group-item").text(text));
    }
 }
 
-function mostrarIntegrantesVacio () {
-   for (i = 0; i < 4; i++) {
-       var id = "#integrante" + (i+1);
-       var text = "";
-       $(id).text(text);
-   }
-}
 
 function mostrarInformacion (datosEquipo, equipoElegido, datosIntegrantes, integranteElegido){
     var integrantes = ordenarIntegrantes (datosEquipo, equipoElegido, datosIntegrantes);
     var integrante = integrantes[integranteElegido];
-    $("#nombreReal").text(integrante.nombre + " " + integrante.apellido);
-    $("#nick").text(integrante.nickname);
-    $("#edad").text(integrante.edad);
-    $("#favCard").text(integrante.cartaFavorita);
-    $("#favClass").text(integrante.claseFavorita);
+    $("#nombre").text("Nombre: " + integrante.nombre);
+    $("#apellido").text("Apellido: "+ integrante.nickname);
+    $("#edad").text("Edad: " + integrante.edad);
+    $("#favCard").text("Carta Favorita: " + integrante.cartaFavorita);
+    $("#favClass").text("Clase Favorita: " + integrante.claseFavorita);
 }
 
 function ordenarIntegrantes (datosEquipo, equipoElegido, datosIntegrantes) {
@@ -50,30 +64,24 @@ function ordenarIntegrantes (datosEquipo, equipoElegido, datosIntegrantes) {
     return integrantes;
 }
 
-function clickIntegrante1 (e) {
-    var id = $(e.target);
-    mostrarIntegrantes(jsonEquipos,0);
-}
 
-function clickIntegrante2 (e) {
-    var id = $(e.target);
-    mostrarIntegrantes(jsonEquipos,1);
-}
-
-function clickIntegrante3 (e) {
-    var id = $(e.target);
-    mostrarIntegrantes(jsonEquipos,2);
-}
-
-function clickIntegrante4 (e) {
-    var id = $(e.target);
-    mostrarIntegrantes(jsonEquipos, 3);
-}
-
+function clickEquipo (e) {
+    $("#muestraIntegrantes").empty();
+    var id = $(e.target).attr("id");
+    mostrarIntegrantes(jsonEquipos,id);
+    $(e.target).addClass("equipoCSS");
+    $(e.target).siblings().removeClass("equipoCSS");
+    }
+    
+ function clickIntegrante (e) {
+    $("#muestraIntegrantes").empty();
+    var id = $(e.target).attr("id");
+    mostrarIntegrantes(jsonEquipos,id);
+    $(e.target).addClass("equipoCSS");
+    $(e.target).siblings().removeClass("equipoCSS");
+ }
 
 $(document).ready(mostrarEquipos(jsonEquipos));
 $(document).ready(mostrarIntegrantesVacio());
-$("#equipo1").click(clickIntegrante1);
-$("#equipo2").click(clickIntegrante2);
-$("#equipo3").click(clickIntegrante3);
-$("#equipo4").click(clickIntegrante4);
+$(document).ready($("#muestraEquipos").children().click(clickEquipo));
+$(document).ready(mostrarInformacion(jsonEquipos,2,jsonIntegrantes,2));
