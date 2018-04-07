@@ -1,0 +1,78 @@
+{
+    "instancias": 
+            [
+             {
+                "idInstancia": "i1",
+		"nombre" : "Semana1",
+		"DiaInicio": "11/04",
+		"DiaFin": "18/04",
+		"HoraInicio": "00:00",
+		"HoraFin": "00:00",
+		"enfrentamientos": [
+                                    {"idEnfrentamiento": "e1"},
+                                    {"idEnfrentamiento": "e2"}
+                ]
+             },
+                 {
+                "idInstancia": "i2",
+		"nombre" : "Semana2",
+		"DiaInicio": "18/04",
+		"DiaFin": "25/04",
+		"HoraInicio": "00:00",
+		"HoraFin": "00:00",
+		"enfrentamientos": [
+                                    {"idEnfrentamiento": "e3"},
+                                    {"idEnfrentamiento": "e4"}
+                ]
+             },
+                 {
+                "idInstancia": "i3",
+		"nombre" : "Semana3",
+		"DiaInicio": "25/04",
+		"DiaFin": "02/05",
+		"HoraInicio": "00:00",
+		"HoraFin": "00:00",
+		"enfrentamientos": [
+                                    {"idEnfrentamiento": "e5"},
+                                    {"idEnfrentamiento": "e6"}
+                ]
+             },
+                 {
+                "idInstancia": "i4",
+		"nombre" : "Semana4",
+		"DiaInicio": "02/05",
+		"DiaFin": "09/05",
+		"HoraInicio": "00:00",
+		"HoraFin": "00:00",
+		"enfrentamientos": [
+                                    {"idEnfrentamiento": "e1"},
+                                    {"idEnfrentamiento": "e2"}
+                ]
+             },
+                 {
+                "idInstancia": "i5",
+		"nombre" : "Semana5",
+		"DiaInicio": "09/05",
+		"DiaFin": "16/05",
+		"HoraInicio": "00:00",
+		"HoraFin": "00:00",
+		"enfrentamientos": [
+                                    {"idEnfrentamiento": "e3"},
+                                    {"idEnfrentamiento": "e4"}
+                ]
+             },
+                 {
+                "idInstancia": "i6",
+		"nombre" : "Semana6",
+		"DiaInicio": "16/05",
+		"DiaFin": "23/05",
+		"HoraInicio": "00:00",
+		"HoraFin": "00:00",
+		"enfrentamientos": [
+                                    {"idEnfrentamiento": "e5"},
+                                    {"idEnfrentamiento": "e6"}
+                ]
+             }
+             
+            ]
+}
