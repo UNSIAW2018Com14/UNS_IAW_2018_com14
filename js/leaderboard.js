@@ -62,15 +62,12 @@ function obtenerPuntajeEquipos (datosEquipos, datosBO5, datosIntegrantes){
     var arrPuntajes = obtenerPuntajes (datosBO5, datosIntegrantes);
     var arrPuntajesEquipos = [];
     for (i = 0; i < datosEquipos.equipos.length; i++){
-        var equipo = datosEquipos.equipos[i];
-        for (j = 0; j < equipo.integrantes.length;j++){
-        var integrante = equipo.integrantes[j];
+        for (j = 0; j < datosEquipos.equipos[i].integrantes.length;j++){       
             for (k = 0; k < arrPuntajes.length; k++) {
-            var equipoPuntaje = arrPuntajes[k];
-                if (integrante.nickname === equipoPuntaje[0]) {
+                if (datosEquipos.equipos[i].integrantes[j].nickname === (arrPuntajes[k])[0]) {
                     var puntajeEquipo = [];
-                    puntajeEquipo[1] = equipoPuntaje[1];
-                    puntajeEquipo[0] = equipo.nombre;
+                    puntajeEquipo[1] = (arrPuntajes[k])[1];
+                    puntajeEquipo[0] = datosEquipos.equipos[i].nombre;
                     arrPuntajesEquipos[i] = puntajeEquipo; 
                 }
             }
