@@ -1,19 +1,94 @@
-
-function mostrarRankingEquipos (datosEquipos){
-    for (i = 0; i < datosEquipos.equipos.length; i++) {
-     $("#rankingEquipos").append($("<li></li>").addClass("list-group-item").text(datosEquipos.equipos[i].nombre));
+function mostrarRankingEquipos (datosEquipos, datosBO5, datosIntegrantes){
+    var arrPuntajes = obtenerPuntajeEquipos(datosEquipos, datosBO5, datosIntegrantes);
+    for (i = 0; i < arrPuntajes.length; i++) {
+        var equipoPuntaje = arrPuntajes[i];
+        var nombre = equipoPuntaje[0];
+        var puntaje = equipoPuntaje[1];
+        $("#rankingEquipos").append($("<li></li>").text(nombre + " : " + puntaje));
     }
 }
 
-function mostrarRankingIntegrantes (datosIntegrantes){
-    for (i = 0; i < datosIntegrantes.integrantes.length; i++) {
-     $("#rankingIntegrantes").append($("<li></li>").append(datosIntegrantes.integrantes[i].nickname));
+function mostrarRankingIntegrantes (datosIntegrantes,datosBO5){
+    var arrPuntajes = obtenerPuntajes(datosBO5, datosIntegrantes);
+    for (i = 0; i< arrPuntajes.length; i++) {
+        var jugadorPuntaje = arrPuntajes[i];
+        var nick = jugadorPuntaje[0];
+        var puntaje = jugadorPuntaje[1];
+        $("#rankingIntegrantes").append($("<li></li>").text(nick + " : " + puntaje));
     }
+}
+
+function obtenerJugadores (datosIntegrantes) {
+    var arrJugadores = [];
+    for (i = 0; i < datosIntegrantes.integrantes.length; i++){
+        var jugador = datosIntegrantes.integrantes[i];
+        arrJugadores[i] = jugador.nickname;
+    }
+    return arrJugadores;
+}
+
+function obtenerPuntajes (datosBO5, datosIntegrantes){
+    var arrJugadores = obtenerJugadores(datosIntegrantes);
+    var arrPuntajes = [];
+    for (h = 0; h < datosIntegrantes.integrantes.length; h++){
+        var puntajeJugador = [];
+        var jugador = arrJugadores[h];
+        puntajeJugador [0] = jugador;
+        puntajeJugador[1] = obtenerPuntajeJugador(jugador, datosBO5);
+        arrPuntajes[h] = puntajeJugador;
+    }
+    arrPuntajes.sort(function(a, b){
+        if (a[1] === b[1]) {
+            return 0;
+            }
+        else {
+        return (a[1] < b[1]) ? 1 : -1;
+                }
+            });
+    return arrPuntajes;   
+}
+
+function obtenerPuntajeJugador (jugador, datosBO5) {
+    var toReturn = 0;
+    for (i = 0; i < datosBO5.bo5.length;i++) {
+        if (datosBO5.bo5[i].Resultado === jugador) {
+            toReturn++;
+        }
+    }
+    return toReturn;
+}
+
+function obtenerPuntajeEquipos (datosEquipos, datosBO5, datosIntegrantes){
+    var arrPuntajes = obtenerPuntajes (datosBO5, datosIntegrantes);
+    var arrPuntajesEquipos = [];
+    for (i = 0; i < datosEquipos.equipos.length; i++){
+        for (j = 0; j < datosEquipos.equipos[i].integrantes.length;j++){       
+            for (k = 0; k < arrPuntajes.length; k++) {
+                if (datosEquipos.equipos[i].integrantes[j].nickname === (arrPuntajes[k])[0]) {
+                    var puntajeEquipo = [];
+                    puntajeEquipo[1] = (arrPuntajes[k])[1];
+                    puntajeEquipo[0] = datosEquipos.equipos[i].nombre;
+                    arrPuntajesEquipos[i] = puntajeEquipo; 
+                }
+            }
+       }
+   }  
+   arrPuntajesEquipos.sort(function(a, b){
+        if (a[1] === b[1]) {
+            return 0;
+            }
+        else {
+        return (a[1] < b[1]) ? 1 : -1;
+                }
+            });
+   return arrPuntajesEquipos;
 }
 
 var jsonIntegrantes = JSON.parse($.getJSON({'url': "json/integrantes.json", 'async': false}).responseText);
 var jsonEquipos = JSON.parse($.getJSON({'url': "json/equipos.json", 'async': false}).responseText);
+var jsonBO5 = JSON.parse($.getJSON({'url': "json/bo5.json", 'async': false}).responseText);
 
-$(document).ready(mostrarRankingEquipos(jsonEquipos));
-$(document).ready(mostrarRankingIntegrantes(jsonIntegrantes));
+$(document).ready(mostrarRankingEquipos(jsonEquipos,jsonBO5,jsonIntegrantes));
+$(document).ready(mostrarRankingIntegrantes(jsonIntegrantes, jsonBO5));
+
 

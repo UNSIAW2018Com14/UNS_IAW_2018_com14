@@ -6,7 +6,6 @@ $("#estilo2").click(function() {
 }
 );
 
-
 $("#estilo1").click(function() {
     var texto = $.cookie("cssCambio");
     $.cookie('cssCambio','css/estilo2.css');
