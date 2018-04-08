@@ -9,4 +9,50 @@
     top: 8px;
     left: 16px;
     float:right;
+<<<<<<< HEAD
+=======
+    border-left: 50px solid red;
+    background-color: lightgrey;
+}
+.lema {
+    font-size: 30px;
+    font-weight: 700;
+    border-left: 0px solid red;
+    background-color: lightgrey;
+}
+
+.imagenPortada {
+    width: 100%;
+    height: 100%;
+}
+
+.textoFecha{
+    font-size: 20px;
+    float: center;
+    padding-left: 20%;
+  	color: white;
+  	border-left: 50px solid red;
+    background-color: lightgrey;
+    vertical-align: center;
+}
+
+.video{
+	position: relative;
+    width: 100%;
+	height: 100%;
+}
+
+.descripcion{
+	padding-left: 80px;
+ 	float: left;
+}
+ p{
+ 	padding-left: 15px;
+ 	float: left;
+    font-size: 20px;
+    float: left;
+    color: white;
+    border-left: 50px solid red;
+    background-color: lightgrey;
+>>>>>>> b65606e19e868f51142b0976bdb35bf9c1811d3c
 }
