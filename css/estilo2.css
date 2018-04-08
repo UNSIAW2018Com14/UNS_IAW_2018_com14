@@ -83,8 +83,11 @@ body{
 }
 
 .imagenPortada {
+  padding-top: -700px;
+   float: top;
     width: 100%;
     height: 100%;
+   
 }
 
 .textoFecha{
@@ -99,7 +102,7 @@ body{
 
 .video{
   width: 100%;
-  height: 315px;
+  height: 415px;
 }
 
 .descripcion{
@@ -114,4 +117,12 @@ body{
     color: black;
     border-left: 50px solid red;
     background-color: lightgrey;
+}
+
+.logoTorneo{
+    width: 415px;
+    height: 415px;
+     display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
