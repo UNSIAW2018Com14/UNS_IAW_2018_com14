@@ -19,26 +19,12 @@ $("#estilo2").click(function() {
   establecerEstilo2(); 
 });
 
-$("#e1").click(function() {
-    establecerEstilo1();
-});
-
-
-$("#e2").click(function() { 
-  establecerEstilo2(); 
-});
-
 function establecerEstilo1 () {
     localStorage.setItem("cssActual", "estilo");
-    $(menuEstilo2).hide();
-    $(menuEstilo1).show();
     $('link[id="estilos"]').attr('href','css/estilo.css');
-
 }
 
 function establecerEstilo2 () {
-    localStorage.setItem("cssActual", "estilo2");
-    $(menuEstilo1).hide();     
-    $(menuEstilo2).show();
+    localStorage.setItem("cssActual", "estilo2");       
     $('link[id="estilos"]').attr('href','css/estilo2.css'); 
 }
