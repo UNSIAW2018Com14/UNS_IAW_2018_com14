@@ -1,16 +1,3 @@
-
-.titulo {
-    font-size: 50px;
-    font-weight: 700;
-    color: black;
-    font-family: armWrestler;
-    padding-top: 54px;
-    position: absolute;
-    top: 8px;
-    left: 16px;
-    float:right;
-}
-
 /* Fixed sidenav, full height */
 .sidenav {
   height: 100%;
@@ -69,3 +56,91 @@
   float: right;
   padding-right: 8px;
 }
+
+body{
+    padding-left: 185px;
+    background-color: black;
+}
+
+.titulo {
+    font-size: 50px;
+    font-weight: 700;
+    color: black;
+    font-family: armWrestler;
+    padding-top: 54px;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    float:right;
+}
+.lema {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.imagenPortada {
+ 	padding-top: 26px;
+    width: 100%;
+    height: 100%;
+}
+
+.textoFecha{
+    font-size: 20px;
+    float: center;
+    padding-top: 20%;
+    padding-left: 20%;
+  	color: white;
+}
+
+.video{
+    width: 455px;
+    height: 315px;
+ }
+
+ .descripcion{
+    font-size: 20px;
+    color: white;
+    float: center;
+    color: white;
+ }
+ 
+ .leaderboardEquipo{
+     font-size: 20px;
+     float: center;
+     padding-top: 20%;
+     padding-left: 20%;
+ }
+ 
+  .leaderboardJugador{
+     font-size: 20px;
+     float: center;
+     padding-top: 20%;
+     padding-left: 20%;
+ }
+ 
+ .equipos{
+     
+ }
+ .integrantes{
+     
+ }
+ 
+ .equipoLogo{
+   float: center;
+   padding-left: 20%;
+ }
+
+ .integranteFoto{
+   float: center;
+   padding-left: 20%;
+ }
+ 
+ .infoIntegrante{
+ }
+ 
+ .anunciosFoto{
+   float: center;
+   width: 200px;
+   height: 100px;
+ }
+
