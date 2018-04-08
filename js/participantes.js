@@ -1,36 +1,19 @@
-var jsonIntegrantes = JSON.parse($.getJSON({'url': "json/integrantes.json", 'async': false}).responseText);
-var jsonEquipos = JSON.parse($.getJSON({'url': "json/equipos.json", 'async': false}).responseText);
-
 function mostrarEquipos (datosEquipos){
     for (i = 0; i < datosEquipos.equipos.length; i++) {
        var id = "equipo"+(i+1);
-       $("#muestraEquipos").append($("<li></li>").addClass("list-group-item").attr("id",id).text(datosEquipos.equipos[i].nombre));
+       var equipo = datosEquipos.equipos[i];
+       $("#muestraEquipos").append($("<li></li>").addClass("list-group-item").attr("id",id).prop("equipo", i).text(equipo.nombre));
     }
 }
-
 
 function mostrarIntegrantes(datosEquipos, idEquipo) {
-    var equipoElegido;
-    switch (idEquipo) {
-    case "equipo1":
-        equipoElegido=0;
-        break;
-    case "equipo2":
-        equipoElegido=1;
-        break;
-    case "equipo3":
-        equipoElegido=2;
-        break;
-    case "equipo4":
-        equipoElegido=3;
-        break;
-    }
-    
-    for (i = 0; i < datosEquipos.equipos[equipoElegido].integrantes.length; i++) {
+    for (i = 0; i < datosEquipos.equipos[idEquipo].integrantes.length; i++) {
        var id = "integrante" + (i+1);
-       $("#muestraIntegrantes").append($("<li></li>").addClass("list-group-item").attr("id",id).text(datosEquipos.equipos[equipoElegido].integrantes[i].nickname));
-}
-return equipoElegido;
+       var integrante = datosEquipos.equipos[idEquipo].integrantes[i];
+       var equipo = datosEquipos.equipos[idEquipo];
+       $("#muestraIntegrantes").append($("<li></li>").addClass("list-group-item").attr("id",id).prop("integrante", i).text(integrante.nickname));
+    }
+    return equipo.icono;
 }
 
 function mostrarIntegrantesVacio (){
@@ -48,20 +31,7 @@ function mostrarInformacionVacia (){
     $("#favClass").text("Clase Favorita: ");
 }
 
-function mostrarInformacion (datosEquipos, equipoElegido, datosIntegrantes, idIntegrante){
-    
-    var integranteElegido;
-    switch (idIntegrante) {
-    case "integrante1":
-        integranteElegido=0;
-        break;
-    case "integrante2":
-        integranteElegido=1;
-        break;
-    case "integrante3":
-        integranteElegido=2;
-        break;
-    }
+function mostrarInformacion (datosEquipos, equipoElegido, datosIntegrantes, integranteElegido){
     var integrantes = ordenarIntegrantes (datosEquipos, equipoElegido, datosIntegrantes);
     var integrante = integrantes[integranteElegido];
     $("#nombre").text("Nombre: " + integrante.nombre);
@@ -74,9 +44,11 @@ function mostrarInformacion (datosEquipos, equipoElegido, datosIntegrantes, idIn
 
 function ordenarIntegrantes (datosEquipos, equipoElegido, datosIntegrantes) {
     var arrIntegrantes = [];
-    for (j = 0; j < datosEquipos.equipos[equipoElegido].integrantes.length;j++) {
+    var equipo = datosEquipos.equipos[equipoElegido];
+    for (j = 0; j < equipo.integrantes.length;j++) {
         for (i = 0; i < datosIntegrantes.integrantes.length; i++) {
-            if (datosEquipos.equipos[equipoElegido].integrantes[j].nickname === datosIntegrantes.integrantes[i].nickname) {
+            var integrante = datosIntegrantes.integrantes[i];
+            if (equipo.integrantes[j].nickname === integrante.nickname) {
                 arrIntegrantes[j] = datosIntegrantes.integrantes[i];
             }
         }
@@ -84,9 +56,8 @@ function ordenarIntegrantes (datosEquipos, equipoElegido, datosIntegrantes) {
     return arrIntegrantes;
 }
 
-function mostrarIcono(datosEquipos, equipoElegido) {
-   var link = datosEquipos.equipos[equipoElegido].icono;
-   var src = "./imagenes/" + link;
+function mostrarIcono(icono) {
+   var src = "./imagenes/" + icono;
    $("#equipoLogo").append('<img id="logo" alt="Logo del equipo" src= ' +src+' class="logo"/>');   
 }
 
@@ -98,22 +69,25 @@ function mostrarFoto (foto){
 function clickEquipo (e) {
     $("#muestraIntegrantes").empty();
     $("#equipoLogo").empty();
-    var id = $(e.target).attr("id");
-    var equipoElegido = mostrarIntegrantes(jsonEquipos,id);
-    mostrarIcono(jsonEquipos,equipoElegido);
-    $("#muestraIntegrantes").children().on("click", {x:equipoElegido},clickIntegrante);
+    var equipo = $(e.target).prop("equipo");
+    var icono = mostrarIntegrantes(jsonEquipos,equipo);
+    mostrarIcono(icono);
+    $("#muestraIntegrantes").children().on("click", {x:equipo},clickIntegrante);
     $(e.target).addClass("equipoCSS");
     $(e.target).siblings().removeClass("equipoCSS");
     }
     
  function clickIntegrante (e) {
      $("#integranteFoto").empty();
-    var id = $(e.target).attr("id");
-    var foto = mostrarInformacion(jsonEquipos,e.data.x,jsonIntegrantes,id);
+    var integrante = $(e.target).prop("integrante");
+    var foto = mostrarInformacion(jsonEquipos,e.data.x,jsonIntegrantes,integrante);
     mostrarFoto (foto);
     $(e.target).addClass("equipoCSS");
     $(e.target).siblings().removeClass("equipoCSS");
  }
+
+var jsonIntegrantes = JSON.parse($.getJSON({'url': "json/integrantes.json", 'async': false}).responseText);
+var jsonEquipos = JSON.parse($.getJSON({'url': "json/equipos.json", 'async': false}).responseText);
 
 $(document).ready(mostrarEquipos(jsonEquipos));
 $(document).ready(mostrarIntegrantesVacio());
