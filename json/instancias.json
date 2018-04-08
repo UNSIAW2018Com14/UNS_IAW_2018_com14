@@ -3,7 +3,7 @@
             [
              {
                 "idInstancia": "i1",
-		"nombre" : "Semana1",
+		"nombre" : "Semana 1",
 		"diaInicio": "11/04",
 		"diaFin": "18/04",
 		"horaInicio": "00:00",
@@ -15,7 +15,7 @@
              },
                  {
                 "idInstancia": "i2",
-		"nombre" : "Semana2",
+		"nombre" : "Semana 2",
 		"diaInicio": "18/04",
 		"diaFin": "25/04",
 		"horaInicio": "00:00",
@@ -27,7 +27,7 @@
              },
                  {
                 "idInstancia": "i3",
-		"nombre" : "Semana3",
+		"nombre" : "Semana 3",
 		"diaInicio": "25/04",
 		"diaFin": "02/05",
 		"horaInicio": "00:00",
@@ -39,7 +39,7 @@
              },
                  {
                 "idInstancia": "i4",
-		"nombre" : "Semana4",
+		"nombre" : "Semana 4",
 		"diaInicio": "02/05",
 		"diaFin": "09/05",
 		"horaInicio": "00:00",
@@ -51,7 +51,7 @@
              },
                  {
                 "idInstancia": "i5",
-		"nombre" : "Semana5",
+		"nombre" : "Semana 5",
 		"diaInicio": "09/05",
 		"diaFin": "16/05",
 		"horaInicio": "00:00",
@@ -63,7 +63,7 @@
              },
                  {
                 "idInstancia": "i6",
-		"nombre" : "Semana6",
+		"nombre" : "Semana 6",
 		"diaInicio": "16/05",
 		"diaFin": "23/05",
 		"horaInicio": "00:00",
