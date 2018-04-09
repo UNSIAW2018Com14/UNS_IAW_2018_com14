@@ -1,3 +1,22 @@
+ .equipoLogo{
+   float: center;
+   padding-left: 20%;
+ }
+
+ .integranteFoto{
+   float: center;
+   padding-left: 20%;
+}
+ 
+ .infoIntegrante{
+ }
+ 
+ .anunciosFoto{
+   float: center;
+   width: 200px;
+   height: 100px;
+ }
+ 
 .equipoCSS {
     background: lightblue;
 }
@@ -5,4 +24,21 @@
 .logo {
     width:300px;
     height:200px;
+}
+
+.informacionParticipantes{
+  padding-top: 100px;
+}
+
+.titulos {
+    background: lightgrey;
+    margin: 5px;
+  }
+
+.tablaInformacion{
+  background-color: white;
+}
+
+body{
+  background-image: url(fondo.jpg)
 }
