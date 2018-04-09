@@ -6,7 +6,7 @@
  .integranteFoto{
    float: center;
    padding-left: 20%;
- }
+}
  
  .infoIntegrante{
  }
@@ -34,3 +34,11 @@
     background: lightgrey;
     margin: 5px;
   }
+
+.tablaInformacion{
+  background-color: white;
+}
+
+body{
+  background-image: url(fondo.jpg)
+}
