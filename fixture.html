@@ -9,7 +9,7 @@
         
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/fixture.css" rel="stylesheet">
+        <link href="css/estiloFixture.css" rel="stylesheet">
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
         <script  type="text/javascript" src="js/fixture.js" async></script>
@@ -38,12 +38,19 @@
         <li class="active"><a href="leaderboard.html">Leaderboard<span class="sr-only">(current)</span></a></li>
         <li class="active"><a href="anuncios.html">Anuncios<span class="sr-only">(current)</span></a></li>
         </ul>
+      <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Estilos <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a id="estilo1">Estilo 1</a></li>
+            <li><a id="estilo2">Estilo 2</a></li>
+          </ul>
+        </li>
+      </ul>
     </div><!-- /.navbar-collapse -->
   </div>
 </nav>
-
-    <div class="informacionFixture">
-        <h2><div class="titulos">Fixture</div> </h2>
+        <img src="imagenes/portadaFixture.jpg" class="imagenPortada"  alt="Norway" style="width:100%;">
         <table class="table table-striped" id="tabla">
             <tr>
               <th id="fecha">Fecha</th>
@@ -52,7 +59,7 @@
               <th id="equipo2">Equipo 2</th>         
             </tr>
         </table>
-    </div>
+
 
             <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

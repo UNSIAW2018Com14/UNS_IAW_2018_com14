@@ -1,6 +1,5 @@
 function mostrarRankingEquipos (datosEquipos, datosBO5, datosIntegrantes){
     var arrPuntajes = obtenerPuntajeEquipos(datosEquipos, datosBO5, datosIntegrantes);
-
     for (i = 0; i < arrPuntajes.length; i++) {
         var equipoPuntaje = arrPuntajes[i];
         var nombre = equipoPuntaje[0];
@@ -60,33 +59,29 @@ function obtenerPuntajeJugador (jugador, datosBO5) {
 }
 
 function obtenerPuntajeEquipos (datosEquipos, datosBO5, datosIntegrantes){
-var arrPuntajes = obtenerPuntajes (datosBO5, datosIntegrantes);
+    var arrPuntajes = obtenerPuntajes (datosBO5, datosIntegrantes);
     var arrPuntajesEquipos = [];
-    var suma = 0;
     for (i = 0; i < datosEquipos.equipos.length; i++){
         for (j = 0; j < datosEquipos.equipos[i].integrantes.length;j++){       
             for (k = 0; k < arrPuntajes.length; k++) {
                 if (datosEquipos.equipos[i].integrantes[j].nickname === (arrPuntajes[k])[0]) {
                     var puntajeEquipo = [];
-                    suma += (arrPuntajes[k])[1];
                     puntajeEquipo[1] = (arrPuntajes[k])[1];
                     puntajeEquipo[0] = datosEquipos.equipos[i].nombre;
-                    arrPuntajesEquipos[k] = puntajeEquipo; 
+                    arrPuntajesEquipos[i] = puntajeEquipo; 
                 }
             }
        }
    }  
-  
-     arrPuntajesEquipos.sort(function(a, b){
+   arrPuntajesEquipos.sort(function(a, b){
         if (a[1] === b[1]) {
             return 0;
             }
         else {
         return (a[1] < b[1]) ? 1 : -1;
                 }
-            });  
-return arrPuntajesEquipos;
-
+            });
+   return arrPuntajesEquipos;
 }
 
 var jsonIntegrantes = JSON.parse($.getJSON({'url': "json/integrantes.json", 'async': false}).responseText);

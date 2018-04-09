@@ -3,16 +3,3 @@
    width: 200px;
    height: 100px;
  }
-
- .informacionPagina{
- 	padding-top: 100px; 
- }
-
- .texto{
- 	background-color: white;
- }
-
- body{
- 	opacity : 10;
- 	background-image: url(fondo.jpg);
- }

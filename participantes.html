@@ -38,16 +38,26 @@
         <li class="active"><a href="leaderboard.html">Leaderboard<span class="sr-only">(current)</span></a></li>
         <li class="active"><a href="anuncios.html">Anuncios<span class="sr-only">(current)</span></a></li>
         </ul>
+      <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Estilos <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a id="estilo1">Estilo 1</a></li>
+            <li><a id="estilo2">Estilo 2</a></li>
+          </ul>
+        </li>
+      </ul>
+    
     </div><!-- /.navbar-collapse -->
 </nav>
 </div>
              
-        <div class="informacionParticipantes">
+        <h1>Participantes</h1>
+           <hr>
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">     
                     <div class="equipos">
-                        <h2><div class="titulos">Listado de equipos</div> </h2>
                           <ul class="list-group" id ="muestraEquipos">
                         </ul>               
                     </div>
@@ -58,8 +68,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6">
-                <h2><div class="titulos">Listado de integrantes</div> </h2>     
+                <div class="col-sm-6">     
                     <div class="integrantes">
                        <ul class="list-group" id ="muestraIntegrantes">
                         </ul>               
@@ -72,7 +81,7 @@
                 </div>
             <div class="row">
                 <div class ="infoIntegrante">
-                    <h2><div class="titulos"> Información personal del integrante</div> </h2>
+                    <h2> Información personal del integrante </h2>
                     <ul class="list-group" id = "informacionIntegrante">
                         <li class="list-group-item" id="nombre"></li>
                         <li class="list-group-item" id="apellido" ></li>
@@ -83,7 +92,6 @@
                 </div>
             </div>
         </div>  
-    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
