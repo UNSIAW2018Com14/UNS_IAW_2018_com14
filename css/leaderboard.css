@@ -11,15 +11,21 @@
      padding-top: 20%;
      padding-left: 20%;
  }
- 
- .equipos{
-     
- }
- .integrantes{
-     
- }
- 
 
+h2{
+    border-left: 6px solid red;
+    background-color: lightgrey;
+
+} 
+.leaderboardEquipo{
+    background-color: white;
+    border: 5px solid grey;   
+}
+
+.leaderboardJugador{
+    background-color: white;
+    border: 5px solid grey;
+}
 
 body{
    background-image: url(fondo.jpg); 

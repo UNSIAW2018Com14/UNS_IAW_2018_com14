@@ -1,5 +1,19 @@
  .informacion{
  	padding-top: 70px;
- 	padding-left: 40px; 
+ 	padding-left: 40px;
  }
 
+
+ h1{
+ 	border-left: 8px solid red;
+    background-color: lightgrey;
+ }
+
+ .noticias{
+ 	 border-left: 8px solid red;
+    background-color: white;
+ }
+
+body{
+   background-image: url(fondo.jpg); 
+}

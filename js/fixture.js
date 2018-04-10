@@ -7,9 +7,9 @@ function mostrarEquipos (datosInstancias, datosEnfrentamientos) {
                     var equipo1 = $("#equipo1").append($("<tr></tr>"));
                     var equipo2 = $("#equipo2").append($("<tr></tr>"));
                     if (i % 2 === 0)
-                        fecha.append($("<td></td").text(datosInstancias.instancias[k].nombre));
+                       fecha.append($("<td></td>").text(datosInstancias.instancias[k].nombre));
                     else
-                        fecha.append($("<td></td").text(datosInstancias.instancias[k].diaInicio + " - " + datosInstancias.instancias[k].diaFin));
+                    fecha.append($("<td></td").text(datosInstancias.instancias[k].diaInicio + " - " + datosInstancias.instancias[k].diaFin));
                     equipo1.append($("<td></td").text(datosEnfrentamientos.enfrentamientos[i].equipo1));
                     equipo2.append($("<td></td").text(datosEnfrentamientos.enfrentamientos[i].equipo2));
                 }
