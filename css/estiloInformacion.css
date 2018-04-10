@@ -7,11 +7,15 @@
  h1{
  	border-left: 8px solid red;
     background-color: lightgrey;
+
  }
 
  .noticias{
  	 border-left: 8px solid red;
     background-color: white;
+ }
+ li{
+ 	margin: 10px;
  }
 
 body{
