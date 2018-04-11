@@ -6,8 +6,8 @@
         "DNI": "35345231",
         "edad": "17",
         "sexo" : "M",
-        "foto" : "foto1.jpg",
-        "cartaFavorita": "Firelands portal",
+        "foto" : "foto1.png",
+        "cartaFavorita": "Firelands Portal",
         "claseFavorita": "Mage"
     },
     {
@@ -17,9 +17,9 @@
         "DNI" : "31234421",
         "edad": "19",
         "sexo" : "M",
-        "foto" : "foto2.jpg",
-        "cartaFavorita": "Twisting Nether",
-        "claseFavorita": "Warlock"
+        "foto" : "foto2.png",
+        "cartaFavorita": "Brawl",
+        "claseFavorita": "Warrior"
     },
         {
         "nombre": "Tony",
@@ -28,8 +28,8 @@
         "DNI" : "28675009",
         "edad": "25",
         "sexo" : "M",
-        "foto" : "foto3.jpg",
-        "cartaFavorita": "Dirty Rat",
+        "foto" : "foto3.png ",
+        "cartaFavorita": "Annoy-o-tron",
         "claseFavorita": "Warrior"
     },
         {
@@ -39,7 +39,7 @@
         "DNI" : "22567221",
         "edad": "35",
         "sexo" : "M",
-        "foto" : "foto4.jpg",
+        "foto" : "foto4.png",
         "cartaFavorita": "Knife Juggler",
         "claseFavorita": "Paladin"
     },
@@ -50,7 +50,7 @@
         "DNI" : "24987321",
         "edad": "36",
         "sexo" : "F",
-        "foto" : "foto5.jpg",
+        "foto" : "foto5.png",
         "cartaFavorita": "Blizzard",
         "claseFavorita": "Mage"
     },
@@ -61,7 +61,7 @@
         "DNI" : "30677832",
         "edad": "21",
         "sexo" : "F",
-        "foto" : "foto6.jpg",
+        "foto" : "foto6.png",
         "cartaFavorita": "Lighting Storm",
         "claseFavorita": "Shaman"
     },
@@ -72,7 +72,7 @@
         "DNI" : "39987334",
         "edad": "19",
         "sexo" : "F",
-        "foto" : "foto7.jpg",
+        "foto" : "foto7.png",
         "cartaFavorita": "Psychic Scream",
         "claseFavorita": "Priest"
     },
@@ -83,7 +83,7 @@
         "DNI" : "25555990",
         "edad": "25",
         "sexo" : "F",
-        "foto" : "foto8.jpg",
+        "foto" : "foto8.png",
         "cartaFavorita": "Flamestrike",
         "claseFavorita": "Mage"
     },
@@ -94,7 +94,7 @@
         "DNI" : "21146890",
         "edad": "33",
         "sexo" : "M",
-        "foto" : "foto9.jpg",
+        "foto" : "foto9.png",
         "cartaFavorita": "Nourish",
         "claseFavorita": "Druid"
     },
@@ -105,7 +105,7 @@
         "DNI" : "37303022",
         "edad": "20",
         "sexo" : "M",
-        "foto" : "foto10.jpg",
+        "foto" : "foto10.png",
         "cartaFavorita": "Frost Shock",
         "claseFavorita": "Shaman"
     },
@@ -116,9 +116,9 @@
         "DNI" : "23833110",
         "edad": "33",
         "sexo" : "F",
-        "foto" : "foto11.jpg",
+        "foto" : "foto11.png",
         "cartaFavorita": "Hex",
-        "claseFavorita": "Warrior"
+        "claseFavorita": "Warlock"
     },
              {
         "nombre": "Pietro",
@@ -127,7 +127,7 @@
         "DNI" : "22300687",
         "edad": "29",
         "sexo" : "M",
-        "foto" : "foto12.jpg",
+        "foto" : "foto12.png",
         "cartaFavorita": "Sprint",
         "claseFavorita": "Rouge"
     }

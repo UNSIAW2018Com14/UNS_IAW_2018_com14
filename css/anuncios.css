@@ -1,15 +1,11 @@
  .anunciosFoto{
    float: center;
-   width: 200px;
+   width: 181px;
    height: 100px;
  }
 
  .informacionPagina{
  	padding-top: 100px; 
- }
-
- .texto{
- 	background-color: white;
  }
 
  body{
@@ -18,5 +14,5 @@
  }
 
  .card{
- 	background-color: white;
+ 	background-color: #FFF8DC;
  }

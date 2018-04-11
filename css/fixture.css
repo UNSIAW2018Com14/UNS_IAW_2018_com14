@@ -3,8 +3,8 @@
 }
 
 h2, h3{
-    border-left: 8px solid red;
-    background-color: lightgrey;
+    border-left: 6px solid #DEB887;
+    background-color: #FAEBD7;
     margin: 5px;
 
 } 
@@ -27,4 +27,7 @@ th, tr {
 
 body{
    background-image: url(fondo.jpg); 
+}
+.tablaColor{
+    background-color: #FFF8DC; 
 }

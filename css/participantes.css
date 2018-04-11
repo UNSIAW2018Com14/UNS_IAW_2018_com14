@@ -1,18 +1,12 @@
  .equipoLogo{
-   float: center;
    padding-left: 20%;
  }
 
  .integranteFoto{
-   float: center;
    padding-left: 20%;
 }
- 
- .infoIntegrante{
- }
- 
+
  .anunciosFoto{
-   float: center;
    width: 200px;
    height: 100px;
  }
@@ -31,14 +25,19 @@
 }
 
 .titulos {
-    border-left: 6px solid red;
-    background-color: lightgrey;
+    border-left: 6px solid #DEB887;
+    background-color: #FAEBD7;
   }
 
 .tablaInformacion{
-  background-color: white;
+  background-color: #FFF8DC;
 }
 
 body{
   background-image: url(fondo.jpg)
+}
+
+.muestras{
+    background-color: #FFF8DC; 
+    border-left: 6px solid #DEB887;
 }

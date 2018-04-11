@@ -3,7 +3,7 @@
     {
     	"nombre": "X-Men",
    	"institucion": "UNS",
-        "icono": "logoXMEN.jpg",
+        "icono": "logoXMEN.png",
     	"integrantes": [
                           {"nickname": "Storm"},
                           {"nickname": "Iceman"},
@@ -13,7 +13,7 @@
      {
     	"nombre": "TheAvengers",
    	"institucion": "UTN BB",
-        "icono": "logoAVENGERS.jpg",
+        "icono": "logoAVENGERS.png",
     	"integrantes": [
                         {"nickname": "ScarletWitch"},
                         {"nickname": "IronMan"},
@@ -33,7 +33,7 @@
          {
     	"nombre": "HellfireClub",
    	"institucion": "Siglo 21",
-        "icono": "logoHELLFIRECLUB.jpg",
+        "icono": "logoHELLFIRECLUB.png",
     	"integrantes": [
                         {"nickname": "WhiteQueen"},
                         {"nickname": "Gambit"},

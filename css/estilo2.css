@@ -87,7 +87,6 @@ body{
    float: top;
     width: 100%;
     height: 100%;
-   
 }
 
 .textoFecha{
@@ -115,7 +114,7 @@ body{
     font-size: 20px;
     float: left;
     color: black;
-    border-left: 50px solid red;
+    border-left: 50px solid #DEB887;
     background-color: lightgrey;
 }
 

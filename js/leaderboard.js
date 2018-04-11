@@ -4,7 +4,7 @@ function mostrarRankingEquipos (datosEquipos, datosBO5, datosIntegrantes){
         var equipoPuntaje = arrPuntajes[i];
         var nombre = equipoPuntaje[0];
         var puntaje = equipoPuntaje[1];
-        $("#rankingEquipos").append($("<li></li>").text(nombre + " : " + puntaje));
+        $("#rankingEquipos").append($("<li></li>").text(nombre + " : " + puntaje).append("<hr></hr>"));
     }
 }
 
@@ -14,7 +14,7 @@ function mostrarRankingIntegrantes (datosIntegrantes,datosBO5){
         var jugadorPuntaje = arrPuntajes[i];
         var nick = jugadorPuntaje[0];
         var puntaje = jugadorPuntaje[1];
-        $("#rankingIntegrantes").append($("<li></li>").text(nick + " : " + puntaje));
+        $("#rankingIntegrantes").append($("<li></li>").text(nick + " : " + puntaje).append("<hr></hr>"));
     }
 }
 
