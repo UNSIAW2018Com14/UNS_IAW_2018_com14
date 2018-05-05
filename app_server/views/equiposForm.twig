@@ -1,167 +1,39 @@
 {% extends 'layout.twig' %}
 {% block body %}
-<form method ="POST" action="/form/add">
-	<div class="row">
+<form method ="POST" action="/equiposForm/add">
+	<div class="col-sm-6">
 		<div class="form-group">
-        	 <label for="NombreEquipo">Nombre del Equipo</label>
-   			 <input required type="text" class="form-control" id="NombreEquipo" name="NombreEquipo" placeholder="Ingresar Nombre del Equipo">
+        	<label for="NombreEquipo">Nombre del Equipo</label>
+   			 <input autofocus required type="text" class="form-control" id="NombreEquipo" name="NombreEquipo" placeholder="Ingresar Nombre del Equipo">
    			 <small class="form-text text-muted">Obligatorio</small>
    		</div>
    		<div class="form-group">
-        	 <label for="Institucion">Institución que representa </label>
+        	<label for="Institucion">Institución que representa </label>
    			 <input required type="text" class="form-control" id="Institucion" name="Institucion" placeholder="Ingresar Institución">
    			 <small class="form-text text-muted">Obligatorio</small>
    		</div>
    		<div class="form-group">
-        	 <label for="Icono">Icono</label>
+        	<label for="Icono">Icono</label>
    			 <input required type="text" class="form-control" id="IconoEquipo" name="IconoEquipo" placeholder="Ingresar Icono del Equipo">
    			 <small class="form-text text-muted">Obligatorio</small>
-   		</div>
-   	</div>
-   	obli
-   	<div class= "row">
-   		<div class="col-sm-4">
-   			<div class="form-group">
-			    <label for="Nombre1">Nombre</label>
-			    <input required type="text" class="form-control" id="Nombre1" name="Nombre1" placeholder="Ingresar Nombre">
-			    <small class="form-text text-muted">Obligatorio</small>
-			  </div>
-			  <div class="form-group">
-			    <label for="Apellido1">Apellido</label>
-			    <input required type="text" class="form-control" id="Apellido1" name="Apellido1" placeholder="Ingresar Apellido">
-			    <small class="form-text text-muted">Obligatorio</small>
-			  </div>
-			   <div class="form-group">
-			    <label for="Nickname1">Nickname</label>
-			    <input required type="text" class="form-control" id="Nickname1" name="Nickname1" placeholder="Ingresar Nickname">
-			    <small class="form-text text-muted">Obligatorio</small>
-			  </div>
-			   <div class="form-group">
-			    <label for="DNI1">DNI</label>
-			    <input required type="text" class="form-control" id="DNI1" name="DNI1" placeholder="Ingresar DNI">
-			    <small class="form-text text-muted">Obligatorio</small>
-			  </div>
-			   <div class="form-group">
-			    <label for="Edad1">Edad</label>
-			    <input required type="text" class="form-control" id="Edad1" name="Edad1" placeholder="Ingresar Edad">
-			    <small class="form-text text-muted">Obligatorio</small>
-			  </div>
-			   <div class="form-group">
-			    <label for="Sexo1">Sexo</label>
-			    <input required type="text" class="form-control" id="Sexo1" name= "Sexo1" placeholder="Ingresar Sexo">
-			    <small class="form-text text-muted">Obligatorio</small>
-			  </div>
-			     <div class="form-group">
-			    <label for="Foto1">Foto</label>
-			    <input type="text" class="form-control" id="Foto1" name="Foto1" placeholder="Ingresar Foto">
-			    <small class="form-text text-muted">No Obligatorio</small>
-			  </div>
-			   <div class="form-group">
-			    <label for="Carta Favorita1">Carta Favorita</label>
-			    <input type="text" class="form-control" id="CartaFavorita1" name="CartaFavorita1" placeholder="Ingresar Carta Favorita">
-			    <small class="form-text text-muted">No Obligatorio</small>
-			  </div>
-			   <div class="form-group">
-			    <label for="Clase Favorita1">Clase Favorita</label>
-			    <input type="text" class="form-control" id="ClaseFavorita1" name="ClaseFavorita1" placeholder="Ingresar Clase Favorita">
-			    <small class="form-text text-muted">No Obligatorio</small>
-			  </div>
-   		</div> 
-   		<div class="col-sm-4">
-   			<div class="form-group">
-			    <label for="Nombre2">Nombre</label>
-			    <input required type="text" class="form-control" id="Nombre2" name="Nombre2" placeholder="Ingresar Nombre">
-			    <small class="form-text text-muted">Obligatorio</small>
-			  </div>
-			  <div class="form-group">
-			    <label for="Apellido2">Apellido</label>
-			    <input required type="text" class="form-control" id="Apellido2" name="Apellido2" placeholder="Ingresar Apellido">
-			    <small class="form-text text-muted">Obligatorio</small>
-			  </div>
-			   <div class="form-group">
-			    <label for="Nickname2">Nickname</label>
-			    <input required type="text" class="form-control" id="Nickname2" name="Nickname2" placeholder="Ingresar Nickname">
-			    <small class="form-text text-muted">Obligatorio</small>
-			  </div>
-			   <div class="form-group">
-			    <label for="DNI2">DNI</label>
-			    <input required type="text" class="form-control" id="DNI2" name="DNI2" placeholder="Ingresar DNI">
-			    <small class="form-text text-muted">Obligatorio</small>
-			  </div>
-			   <div class="form-group">
-			    <label for="Edad2">Edad</label>
-			    <input required type="text" class="form-control" id="Edad2" name="Edad2" placeholder="Ingresar Edad">
-			    <small class="form-text text-muted">Obligatorio</small>
-			  </div>
-			   <div class="form-group">
-			    <label for="Sexo2">Sexo</label>
-			    <input required type="text" class="form-control" id="Sexo2" name= "Sexo2" placeholder="Ingresar Sexo">
-			    <small class="form-text text-muted">Obligatorio</small>
-			  </div>
-			     <div class="form-group">
-			    <label for="Foto2">Foto</label>
-			    <input type="text" class="form-control" id="Foto2" name="Foto2" placeholder="Ingresar Foto">
-			    <small class="form-text text-muted">No Obligatorio</small>
-			  </div>
-			   <div class="form-group">
-			    <label for="Carta Favorita2">Carta Favorita</label>
-			    <input type="text" class="form-control" id="CartaFavorita2" name="CartaFavorita2" placeholder="Ingresar Carta Favorita">
-			    <small class="form-text text-muted">No Obligatorio</small>
-			  </div>
-			   <div class="form-group">
-			    <label for="Clase Favorita2">Clase Favorita</label>
-			    <input type="text" class="form-control" id="ClaseFavorita2" name="ClaseFavorita2" placeholder="Ingresar Clase Favorita">
-			    <small class="form-text text-muted">No Obligatorio</small>
-			  </div>
-   		</div> 
-   		<div class="col-sm-4">
-   			<div class="form-group">
-			    <label for="Nombre3">Nombre</label>
-			    <input required type="text" class="form-control" id="Nombre3" name="Nombre3" placeholder="Ingresar Nombre">
-			    <small class="form-text text-muted">Obligatorio</small>
-			  </div>
-			  <div class="form-group">
-			    <label for="Apellido3">Apellido</label>
-			    <input required type="text" class="form-control" id="Apellido3" name="Apellido3" placeholder="Ingresar Apellido">
-			    <small class="form-text text-muted">Obligatorio</small>
-			  </div>
-			   <div class="form-group">
-			    <label for="Nickname3">Nickname</label>
-			    <input required type="text" class="form-control" id="Nickname3" name="Nickname3" placeholder="Ingresar Nickname">
-			    <small class="form-text text-muted">Obligatorio</small>
-			  </div>
-			   <div class="form-group">
-			    <label for="DNI3">DNI</label>
-			    <input required type="text" class="form-control" id="DNI3" name="DNI3" placeholder="Ingresar DNI">
-			    <small class="form-text text-muted">Obligatorio</small>
-			  </div>
-			   <div class="form-group">
-			    <label for="Edad3">Edad</label>
-			    <input required type="text" class="form-control" id="Edad3" name="Edad3" placeholder="Ingresar Edad">
-			    <small class="form-text text-muted">Obligatorio</small>
-			  </div>
-			   <div class="form-group">
-			    <label for="Sexo3">Sexo</label>
-			    <input required type="text" class="form-control" id="Sexo3" name= "Sexo3" placeholder="Ingresar Sexo">
-			    <small class="form-text text-muted">Obligatorio</small>
-			  </div>
-			     <div class="form-group">
-			    <label for="Foto3">Foto</label>
-			    <input type="text" class="form-control" id="Foto3" name="Foto3" placeholder="Ingresar Foto">
-			    <small class="form-text text-muted">No Obligatorio</small>
-			  </div>
-			   <div class="form-group">
-			    <label for="Carta Favorita3">Carta Favorita</label>
-			    <input type="text" class="form-control" id="CartaFavorita3" name="CartaFavorita3" placeholder="Ingresar Carta Favorita">
-			    <small class="form-text text-muted">No Obligatorio</small>
-			  </div>
-			   <div class="form-group">
-			    <label for="Clase Favorita3">Clase Favorita</label>
-			    <input type="text" class="form-control" id="ClaseFavorita3" name="ClaseFavorita3" placeholder="Ingresar Clase Favorita">
-			    <small class="form-text text-muted">No Obligatorio</small>
-			  </div>
-   		</div>  
-   	</div>	
+   		</div>	
+			<div class="form-group">
+			<label for="NickIntegrante1">NickName 1</label>
+   		<input required type="text" class="form-control" id="NickName1" name="NickName1" placeholder="Ingresar NickName del integrante 1">
+   		<small class="form-text text-muted">Obligatorio</small>
+			 </div>
+			 <div class="form-group">
+			<label for="NickIntegrante2">NickName 2</label>
+   		<input required type="text" class="form-control" id="NickName2" name="NickName2" placeholder="Ingresar NickName del integrante 2">
+   		<small class="form-text text-muted">Obligatorio</small>
+			 </div>
+			 <div class="form-group">
+			<label for="NickIntegrante3">NickName 3</label>
+   		<input required type="text" class="form-control" id="NickName3" name="NickName3" placeholder="Ingresar NickName del integrante 3">
+   		<small class="form-text text-muted">Obligatorio</small>
+			 </div>
    	<button type="submit" class="btn btn-primary">Submit</button>	 
+		 </div>
+	</div>
 </form>
 {% endblock %}

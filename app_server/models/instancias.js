@@ -9,19 +9,11 @@ const instanciaSchema = new mongoose.Schema({
         type: String,
         required:true
     },
-    diaInicio:{
+    fechaInicio:{
         type: String,
         required:true
     },
-    diaFin:{
-        type:String,
-        required:true
-    },
-    horaInicio:{
-        type:String,
-        required:true
-    },
-    horaFin:{
+    fechaFin:{
         type:String,
         required:true
     },

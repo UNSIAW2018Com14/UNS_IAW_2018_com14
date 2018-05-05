@@ -14,7 +14,8 @@ const participantesRouter = require('./app_server/routes/participantes');
 const leaderboardRouter = require('./app_server/routes/leaderboard');
 const anunciosRouter = require('./app_server/routes/anuncios');
 const fixtureRouter = require('./app_server/routes/fixture');
-const formRouter = require('./app_server/routes/form');
+const equiposFormRouter = require('./app_server/routes/integrantesForm');
+const integrantesFormRouter = require('./app_server/routes/equiposForm');
 const apiRouter = require('./app_server/routes/api');
 
 const app = express();
@@ -36,7 +37,8 @@ app.use('/participantes', participantesRouter);
 app.use('/leaderboard', leaderboardRouter);
 app.use('/anuncios', anunciosRouter);
 app.use('/fixture', fixtureRouter);
-app.use('/form', formRouter);
+app.use('/integrantesForm', equiposFormRouter);
+app.use('/integrantesForm', integrantesFormRouter);
 app.use('/api', apiRouter);
 
 // express validator middleware

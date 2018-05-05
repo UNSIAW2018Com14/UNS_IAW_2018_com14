@@ -2,14 +2,10 @@ const mongoose = require('mongoose');
 
 const bo5Schema = new mongoose.Schema({
 		idBo5:{
-		type: Number,
-		required:true
-		},
-		dia:{
 		type: String,
 		required:true
 		},
-		hora:{
+		dia:{
 		type: String,
 		required:true
 		},

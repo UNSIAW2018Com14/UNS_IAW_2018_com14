@@ -1,10 +1,10 @@
 {% extends 'layout.twig' %}
 {% block body %}
 
-<form method ="POST" action="/form/addInt">
+<form method ="POST" action="/integrantesForm/add">
   <div class="form-group">
     <label for="Nombre">Nombre</label>
-    <input required type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Ingresar Nombre">
+    <input autofocus required type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Ingresar Nombre">
     <small class="form-text text-muted">Obligatorio</small>
   </div>
   <div class="form-group">
