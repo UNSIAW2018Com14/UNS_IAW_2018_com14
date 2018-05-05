@@ -17,6 +17,7 @@ const fixtureRouter = require('./app_server/routes/fixture');
 const equiposFormRouter = require('./app_server/routes/integrantesForm');
 const integrantesFormRouter = require('./app_server/routes/equiposForm');
 const apiRouter = require('./app_server/routes/api');
+const loginRouter = require('./app_server/routes/login');
 
 const app = express();
 
@@ -40,6 +41,7 @@ app.use('/fixture', fixtureRouter);
 app.use('/integrantesForm', equiposFormRouter);
 app.use('/integrantesForm', integrantesFormRouter);
 app.use('/api', apiRouter);
+app.use('/login', loginRouter);
 
 // express validator middleware
 app.use(expressValidator()); 
