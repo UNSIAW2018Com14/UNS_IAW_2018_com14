@@ -7,12 +7,14 @@
 		    });
 		    FB.getLoginStatus(function(response) {
 		    	if (response.status === 'connected') {
-		    		document.getElementById('status').innerHTML = 'We are connected.';
-		    		document.getElementById('login').style.visibility = 'hidden';
+		    		console.log("c");
+		    		alert("Bienvenido");
+		    		//document.getElementById('status').innerHTML = 'We are connected.';
+		    		//document.getElementById('login').style.visibility = 'hidden';
 		    	} else if (response.status === 'not_authorized') {
-		    		document.getElementById('status').innerHTML = 'We are not logged in.'
+		    		//document.getElementById('status').innerHTML = 'We are not logged in.'
 		    	} else {
-		    		document.getElementById('status').innerHTML = 'You are not logged into Facebook.';
+		    		//document.getElementById('status').innerHTML = 'You are not logged into Facebook.';
 		    	}
 		    });
 		};

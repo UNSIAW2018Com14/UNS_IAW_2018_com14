@@ -9,7 +9,10 @@
     <title>Torneo Hearthstone</title>
     <!-- Bootstrap -->
   	<link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
-    <link id="estilos" href="#" rel="stylesheet">
+    <link id="estilos" href="stylesheets/estilo.css" rel="stylesheet">
+
+
+    
   	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -17,13 +20,10 @@
   </head>
   <body>
 {% include "menuEstilo1.twig" %}
-{% include "menuEstilo2.twig" %} 
 {% block body %}{% endblock %}
     <!-- jQuery -->
     <script src="javascripts/jquery-3.3.1.min.js"></script>
-    <!-- Implementacion de la seleccion de estilo -->
     <script src="javascripts/cambiarEstilo.js" async></script>
-    <script src="javascripts/desplegarMenu.js" async></script>
     <script src="javascripts/loginFB.js" async></script>
   </body>
 </html>
