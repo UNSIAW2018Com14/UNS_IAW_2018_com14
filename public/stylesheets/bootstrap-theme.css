@@ -80,7 +80,7 @@ fieldset[disabled] .btn-danger {
 }
 .btn-default:active,
 .btn-default.active {
-  background-color: #e0e0e0;
+  background-color:#e0e0e0;
   border-color: #dbdbdb;
 }
 .btn-default.disabled,
@@ -101,7 +101,7 @@ fieldset[disabled] .btn-default:active,
 .btn-default.disabled.active,
 .btn-default[disabled].active,
 fieldset[disabled] .btn-default.active {
-  background-color: #e0e0e0;
+  background-color: #FAEBD7;
   background-image: none;
 }
 .btn-primary {

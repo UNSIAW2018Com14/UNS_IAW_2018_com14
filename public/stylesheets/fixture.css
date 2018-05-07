@@ -1,5 +1,6 @@
 .informacionFixture{
 	padding-top: 100px;
+  padding-left:50px;
 }
 
 h2, h3{
@@ -23,11 +24,12 @@ h2, h3{
 
 th, tr {
   border: 3px solid black;
+  text-align: center;
 }
 
-body{
-   background-image: url(fondo.jpg); 
-}
+
+
 .tablaColor{
     background-color: #FFF8DC; 
+    text-align: center;
 }
